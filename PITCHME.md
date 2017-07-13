@@ -90,9 +90,9 @@ We can also use built-in functions like int(), float() and complex() to convert 
 (3+5j)
 ```
 When converting from float to integer, the number gets truncated (integer that is closer to zero).
-Python Decimal
-Python built-in class float performs some calculations that might amaze us. We all know that the sum of 1.1 and 2.2 is 3.3, but Python seems to disagree.
----
+###Python Decimal
+Python built-in class float performs some calculations that might amaze us. 
+---We all know that the sum of 1.1 and 2.2 is 3.3, but Python seems to disagree.
 ```python
 >>> (1.1 + 2.2) == 3.3
 False
@@ -103,15 +103,16 @@ What is going on?
 It turns out that floating-point numbers are implemented in computer hardware as binary fractions, as computer only understands binary (0 and 1). Due to this reason, most of the decimal fractions we know, cannot be accurately stored in our computer.
 
 Let's take an example. We cannot represent the fraction 1/3 as a decimal number. This will give 0.33333333... which is infinitely long, and we can only approximate it.
-
+---
 Turns out decimal fraction 0.1 will result into an infinitely long binary fraction of 0.000110011001100110011... and our computer only stores a finite number of it.
 
 This will only approximate 0.1 but never be equal. Hence, it is the limitation of our computer hardware and not an error in Python.
----
+
 ```python
 >>> 1.1 + 2.2
 3.3000000000000003
 ```
+---
 To overcome this issue, we can use decimal module that comes with Python. While floating point numbers have precision up to 15 decimal places, the decimal module has user settable precision.
 ```python
 import decimal
