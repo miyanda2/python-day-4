@@ -803,9 +803,50 @@ True
 >>> 'at' not in 'battle'
 False
 ```
+---
+###Built-in functions to Work with Python
+Various built-in functions that work with sequence, works with string as well.
 
+Some of the commonly used ones are enumerate() and len(). The enumerate() function returns an enumerate object. It contains the index and value of all the items in the string as pairs. This can be useful for iteration.
 
+Similarly, len() returns the length (number of characters) of the string.
+---
+```python
+str = 'cold'
 
+# enumerate()
+list_enumerate = list(enumerate(str))
+print('list(enumerate(str) = ', list_enumerate)
+
+#character count
+print('len(str) = ', len(str))
+```
+---
+###Python String Formatting
+Escape Sequence
+If we want to print a text like -He said, "What's there?"- we can neither use single quote or double quotes. This will result into SyntaxError as the text itself contains both single and double quotes.
+```python
+>>> print("He said, "What's there?"")
+...
+SyntaxError: invalid syntax
+>>> print('He said, "What's there?"')
+...
+SyntaxError: invalid syntax
+```
+---
+One way to get around this problem is to use triple quotes. Alternatively, we can use escape sequences.
+
+An escape sequence starts with a backslash and is interpreted differently. If we use single quote to represent a string, all the single quotes inside the string must be escaped. Similar is the case with double quotes. Here is how it can be done to represent the above text.
+```python
+# using triple quotes
+print('''He said, "What's there?"''')
+
+# escaping single quotes
+print('He said, "What\'s there?"')
+
+# escaping double quotes
+print("He said, \"What's there?\"")
+```
 
 
 
