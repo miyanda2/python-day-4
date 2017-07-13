@@ -562,6 +562,261 @@ sorted()	Return a new sorted list (does not sort the list itself).
 sum()	Return the sum of all elements in the list.
 ---
 ###Python Tuple
+In Python programming, a tuple is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas in a list, elements can be changed.
+
+####Advantages of Tuple over List
+Since, tuples are quite similiar to lists, both of them are used in similar situations as well.
+However, there are certain advantages of implementing a tuple over a list. Below listed are some of the main advantages:
+We generally use tuple for heterogeneous (different) datatypes and list for homogeneous (similar) datatypes.
+Since tuple are immutable, iterating through tuple is faster than with list. So there is a slight performance boost.
+Tuples that contain immutable elements can be used as key for a dictionary. With list, this is not possible.
+If you have data that doesn't change, implementing it as tuple will guarantee that it remains write-protected.
+---
+####Creating a Tuple
+A tuple is created by placing all the items (elements) inside a parentheses (), separated by comma. The parentheses are optional but is a good practice to write it.
+
+A tuple can have any number of items and they may be of different types (integer, float, list, string etc.).
+---
+```python
+# empty tuple
+# Output: ()
+my_tuple = ()
+print(my_tuple)
+
+# tuple having integers
+# Output: (1, 2, 3)
+my_tuple = (1, 2, 3)
+print(my_tuple)
+
+# tuple with mixed datatypes
+# Output: (1, "Hello", 3.4)
+my_tuple = (1, "Hello", 3.4)
+print(my_tuple)
+
+# nested tuple
+# Output: ("mouse", [8, 4, 6], (1, 2, 3))
+my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+print(my_tuple)
+
+# tuple can be created without parentheses
+# also called tuple packing
+# Output: 3, 4.6, "dog"
+
+my_tuple = 3, 4.6, "dog"
+print(my_tuple)
+
+# tuple unpacking is also possible
+# Output:
+# 3
+# 4.6
+# dog
+a, b, c = my_tuple
+print(a)
+print(b)
+print(c)
+```
+####Accessing Elements in a Tuple
+There are various ways in which we can access the elements of a tuple.
+
+####1. Indexing
+We can use the index operator [] to access an item in a tuple where the index starts from 0.
+
+So, a tuple having 6 elements will have index from 0 to 5. Trying to access an element other that (6, 7,...) will raise an IndexError.
+
+The index must be an integer, so we cannot use float or other types. This will result into TypeError.
+
+Likewise, nested tuple are accessed using nested indexing, as shown in the example below.
+```python
+my_tuple = ('p','e','r','m','i','t')
+
+print(my_tuple[0])
+print(my_tuple[5])
+#print(my_tuple[6])
+#my_tuple[2.0]
+# nested tuple
+n_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+# nested index
+# Output: 's'
+print(n_tuple[0][3])
+# nested index
+# Output: 4
+print(n_tuple[1][1])
+```
+---
+####2. Negative Indexing
+Python allows negative indexing for its sequences.
+
+The index of -1 refers to the last item, -2 to the second last item and so on.
+```python
+my_tuple = ('p','e','r','m','i','t')
+
+# Output: 't'
+print(my_tuple[-1])
+
+# Output: 'p'
+print(my_tuple[-6])
+```
+---
+####3. Slicing
+We can access a range of items in a tuple by using the slicing operator - colon ":".
+```python
+my_tuple = ('p','r','o','g','r','a','m','i','z')
+
+# elements 2nd to 4th
+# Output: ('r', 'o', 'g')
+print(my_tuple[1:4])
+
+# elements beginning to 2nd
+# Output: ('p', 'r')
+print(my_tuple[:-7])
+
+# elements 8th to end
+# Output: ('i', 'z')
+print(my_tuple[7:])
+
+# elements beginning to end
+# Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+print(my_tuple[:])
+```
+Slicing can be best visualized by considering the index to be between the elements as shown below. So if we want to access a range, we need the index that will slice the portion from the tuple.
+
+![PROGRAMIZ](https://cdn.programiz.com/sites/tutorial2program/files/element-slicling.jpg)
+---
+###Deleting a Tuple
+As discussed above, we cannot change the elements in a tuple. That also means we cannot delete or remove items from a tuple.
+
+But deleting a tuple entirely is possible using the keyword del.
+```python 
+my_tuple = ('p','r','o','g','r','a','m','i','z')
+
+# can't delete items
+# if you uncomment line 8,
+# you will get an error:
+# TypeError: 'tuple' object doesn't support item deletion
+
+#del my_tuple[3]
+
+# can delete entire tuple
+# NameError: name 'my_tuple' is not defined
+del my_tuple
+my_tuple
+```
+####Python Strings
+A string is a sequence of characters.
+A character is simply a symbol. For example, the English language has 26 characters.
+Computers do not deal with characters, they deal with numbers (binary). Even though you may see characters on your screen, internally it is stored and manipulated as a combination of 0's and 1's.
+This conversion of character to a number is called encoding, and the reverse process is decoding. ASCII and Unicode are some of the popular encoding used.
+In Python, string is a sequence of Unicode character. Unicode was introduced to include every character in all languages and bring uniformity in encoding. You can learn more about Unicode from here.
+---
+####How to create a string?
+Strings can be created by enclosing characters inside a single quote or double quotes. Even triple quotes can be used in Python but generally used to represent multiline strings and docstrings.
+```python 
+# all of the following are equivalent
+my_string = 'Hello'
+print(my_string)
+
+my_string = "Hello"
+print(my_string)
+
+my_string = '''Hello'''
+print(my_string)
+
+# triple quotes string can extend multiple lines
+my_string = """Hello, welcome to
+           the world of Python"""
+print(my_string)
+```
+---
+####How to access characters in a string?
+We can access individual characters using indexing and a range of characters using slicing. Index starts from 0. Trying to access a character out of index range will raise an IndexError. The index must be an integer. We can't use float or other types, this will result into TypeError.
+Python allows negative indexing for its sequences.
+The index of -1 refers to the last item, -2 to the second last item and so on. We can access a range of items in a string by using the slicing operator (colon).
+---
+```python
+str = 'programiz'
+print('str = ', str)
+
+#first character
+print('str[0] = ', str[0])
+
+#last character
+print('str[-1] = ', str[-1])
+
+#slicing 2nd to 5th character
+print('str[1:5] = ', str[1:5])
+
+#slicing 6th to 2nd last character
+print('str[5:-2] = ', str[5:-2])
+```
+![PROGRAMIZ](https://cdn.programiz.com/sites/tutorial2program/files/element-slicling.jpg)
+
+####How to change or delete a string?
+Strings are immutable. This means that elements of a string cannot be changed once it has been assigned. We can simply reassign different strings to the same name.
+
+```python
+
+>>> my_string = 'programiz'
+>>> my_string[5] = 'a'
+...
+TypeError: 'str' object does not support item assignment
+>>> my_string = 'Python'
+>>> my_string
+'Python'
+```
+---
+We cannot delete or remove characters from a string. But deleting the string entirely is possible using the keyword del.
+```python
+>>> del my_string[1]
+...
+TypeError: 'str' object doesn't support item deletion
+>>> del my_string
+>>> my_string
+...
+NameError: name 'my_string' is not defined
+```
+---
+###Python String Operations
+There are many operations that can be performed with string which makes it one of the most used datatypes in Python.
+
+###Concatenation of Two or More Strings
+Joining of two or more strings into a single one is called concatenation.
+
+The + operator does this in Python. Simply writing two string literals together also concatenates them.
+
+The * operator can be used to repeat the string for a given number of times.
+```python
+str1 = 'Hello'
+str2 ='World!'
+
+# using +
+print('str1 + str2 = ', str1 + str2)
+
+# using *
+print('str1 * 3 =', str1 * 3)
+```
+---
+String Membership Test
+We can test if a sub string exists within a string or not, using the keyword <i>in</i>.
+```python
+>>> 'a' in 'program'
+True
+>>> 'at' not in 'battle'
+False
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
