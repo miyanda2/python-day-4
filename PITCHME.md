@@ -251,6 +251,32 @@ my_list = [1, "Hello", 3.4]
 
 ```
 
+Also, a list can even have another list as an item. This is called nested list.
+```python
+# nested list
+my_list = ["mouse", [8, 4, 6], ['a']]
+```
+---
+
+###How to access elements from a list?
+There are various ways in which we can access the elements of a list.
+
+####List Index
+We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to 4.
+
+Trying to access an element other that this will raise an IndexError. The index must be an integer. We can't use float or other types, this will result into TypeError.
+
+Nested list are accessed using nested indexing.
+---
+
+
+
+
+
+
+
+
+
 
 
 
