@@ -49,7 +49,7 @@ In Python, we can represent these numbers by appropriately placing a prefix befo
 
 
 ####Number system prefix for Python numbers
-Number System | Prefix
+Number System |  Prefix
 ------------ | -------------
 Binary |'0b' or '0B'
 Octal | '0o' or '0O'
@@ -76,9 +76,9 @@ Operations like addition, subtraction coerce integer to float implicitly (automa
 3.0
 ```
 We can see above that 1 (integer) is coerced into 1.0 (float) for addition and the result is also a floating point number.
-
-We can also use built-in functions like int(), float() and complex() to convert between types explicitly. These function can even convert from strings.
 ---
+We can also use built-in functions like int(), float() and complex() to convert between types explicitly. These function can even convert from strings.
+
 ```python
 >>> int(2.3)
 2
@@ -92,6 +92,7 @@ We can also use built-in functions like int(), float() and complex() to convert 
 When converting from float to integer, the number gets truncated (integer that is closer to zero).
 Python Decimal
 Python built-in class float performs some calculations that might amaze us. We all know that the sum of 1.1 and 2.2 is 3.3, but Python seems to disagree.
+---
 ```python
 >>> (1.1 + 2.2) == 3.3
 False
@@ -555,7 +556,7 @@ min()	Return the smallest item in the list
 sorted()	Return a new sorted list (does not sort the list itself).
 sum()	Return the sum of all elements in the list.
 
-
+###Python Tuple
 
 
 
