@@ -848,14 +848,115 @@ print('He said, "What\'s there?"')
 print("He said, \"What's there?\"")
 ```
 
+---
+###Python Dictionary
 
+Python dictionary is an unordered collection of items. While other compound data types have only value as an element, a dictionary has a key: value pair.
+Dictionaries are optimized to retrieve values when the key is known.
+How to create a dictionary?
+Creating a dictionary is as simple as placing items inside curly braces {} separated by comma.
+An item has a key and the corresponding value expressed as a pair, key: value.
+While values can be of any data type and can repeat, keys must be of immutable type (string, number or tuple with immutable elements) and must be unique.
+---
+```python
+# empty dictionary
+my_dict = {}
 
+# dictionary with integer keys
+my_dict = {1: 'apple', 2: 'ball'}
 
+# dictionary with mixed keys
+my_dict = {'name': 'John', 1: [2, 4, 3]}
 
+# using dict()
+my_dict = dict({1:'apple', 2:'ball'})
 
+# from sequence having each item as a pair
+my_dict = dict([(1,'apple'), (2,'ball')])
+```
+---
 
+####How to access elements from a dictionary?
+While indexing is used with other container types to access values, dictionary uses keys. Key can be used either inside square brackets or with the get() method.
+The difference while using get() is that it returns None instead of KeyError, if the key is not found.
+---
+```python
+my_dict = {'name':'Jack', 'age': 26}
 
+# Output: Jack
+print(my_dict['name'])
 
+# Output: 26
+print(my_dict.get('age'))
+
+# Trying to access keys which doesn't exist throws error
+# my_dict.get('address')
+# my_dict['address']
+```
+---
+How to change or add elements in a dictionary?
+Dictionary are mutable. We can add new items or change the value of existing items using assignment operator.
+
+If the key is already present, value gets updated, else a new key: value pair is added to the dictionary.
+```python
+my_dict = {'name':'Jack', 'age': 26}
+
+# update value
+my_dict['age'] = 27
+
+#Output: {'age': 27, 'name': 'Jack'}
+print(my_dict)
+
+# add item
+my_dict['address'] = 'Downtown'  
+
+# Output: {'address': 'Downtown', 'age': 27, 'name': 'Jack'}
+print(my_dict)
+```
+---
+
+###How to delete or remove elements from a dictionary?
+We can remove a particular item in a dictionary by using the method pop(). This method removes as item with the provided key and returns the value.
+The method, popitem() can be used to remove and return an arbitrary item (key, value) form the dictionary. All the items can be removed at once using the clear() method.
+We can also use the del keyword to remove individual items or the entire dictionary itself.
+---
+```python
+# create a dictionary
+squares = {1:1, 2:4, 3:9, 4:16, 5:25}  
+
+# remove a particular item
+# Output: 16
+print(squares.pop(4))  
+
+# Output: {1: 1, 2: 4, 3: 9, 5: 25}
+print(squares)
+
+# remove an arbitrary item
+# Output: (1, 1)
+print(squares.popitem())
+
+# Output: {2: 4, 3: 9, 5: 25}
+print(squares)
+
+# delete a particular item
+del squares[5]  
+
+# Output: {2: 4, 3: 9}
+print(squares)
+
+# remove all items
+squares.clear()
+
+# Output: {}
+print(squares)
+
+# delete the dictionary itself
+del squares
+
+# Throws Error
+# print(squares)
+
+```
 
 
 
