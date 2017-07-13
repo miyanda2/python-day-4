@@ -2,14 +2,11 @@
 # Python Numbers, Type Conversion and Mathematics
 <br>
 
-
+---
 <br>
 <h3><span style="color:black">python numbers</span></strong></h4>
-<br>
 <h4><span style="color:black">Python list</span></strong></h4>
-<br>
 <h4><span style="color:black">python tuples</span></strong></h4>
-<br>
 <h4><span style="color:black">Python string</span></strong></h4>
 <h4><span style="color:black">Python set</span></strong></h4>
 <h4><span style="color:black">Python Dictionary</span></strong></h4>
