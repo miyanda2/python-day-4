@@ -235,7 +235,7 @@ print(random.random())
 ---
 Python offers a range of compound datatypes often referred to as sequences. List is one of the most frequently used and very versatile datatype used in Python.
 
-
+---
 ####How to create a list?
 In Python programming, a list is created by placing all the items (elements) inside a square bracket [ ], separated by commas.
 
@@ -252,7 +252,7 @@ my_list = [1, 2, 3]
 my_list = [1, "Hello", 3.4]
 
 ```
-
+---
 Also, a list can even have another list as an item. This is called nested list.
 ```python
 # nested list
@@ -265,7 +265,7 @@ There are various ways in which we can access the elements of a list.
 
 ####List Index
 We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to 4.
-
+---
 Trying to access an element other that this will raise an IndexError. The index must be an integer. We can't use float or other types, this will result into TypeError.
 
 Nested list are accessed using nested indexing.
@@ -335,7 +335,7 @@ print(my_list[:])
 Slicing can be best visualized by considering the index to be between the elements as shown below. So if we want to access a range, we need two index that will slice that portion from the list.
 
 ![PROGRAMIZ](https://cdn.programiz.com/sites/tutorial2program/files/element-slicling.jpg)
-
+---
 ###How to change or add elements to a list?
 List are mutable, meaning, their elements can be changed unlike string or tuple.
 
@@ -404,6 +404,7 @@ print(odd)
 ###How to delete or remove elements from a list?
 We can delete one or more items from a list using the keyword del. It can even delete the list entirely.
 my_list = ['p','r','o','b','l','e','m']
+---
 ```python
 # delete one item
 del my_list[2]
@@ -429,6 +430,7 @@ We can use remove() method to remove the given item or pop() method to remove an
 The pop() method removes and returns the last item if index is not provided. This helps us implement lists as stacks (first in, last out data structure).
 
 We can also use the clear() method to empty a list.
+---
 ```python
 
 my_list = ['p','r','o','b','l','e','m']
@@ -470,7 +472,7 @@ Finally, we can also delete items in a list by assigning an empty list to a slic
 Methods that are available with list object in Python programming are tabulated below.
 
 They are accessed as list.method(). Some of the methods have already been used above.
-
+---
 
 ###Python List Methods
 append() -  Add an element to the end of the list
@@ -535,7 +537,9 @@ print('a' in my_list)
 
 # Output: True
 print('c' not in my_list)
+
 ```
+---
 ###Iterating Through a List
 Using a for loop we can iterate though each item in a list.
 ```python
@@ -544,7 +548,7 @@ for fruit in ['apple','banana','mango']:
 ```
 ###Built-in Functions with List
 Built-in functions like all(), any(), enumerate(), len(), max(), min(), list(), sorted() etc. are commonly used with list to perform different tasks.
-
+---
 Built-in Functions with List
 Function	Description
 all()	Return True if all elements of the list are true (or if the list is empty).
@@ -556,7 +560,7 @@ max()	Return the largest item in the list.
 min()	Return the smallest item in the list
 sorted()	Return a new sorted list (does not sort the list itself).
 sum()	Return the sum of all elements in the list.
-
+---
 ###Python Tuple
 
 
