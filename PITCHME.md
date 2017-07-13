@@ -4,7 +4,7 @@
 
 ---
 <br>
-<h3><span style="color:black">python numbers</span></strong></h4>
+<h4><span style="color:black">python numbers</span></strong></h4>
 <h4><span style="color:black">Python list</span></strong></h4>
 <h4><span style="color:black">python tuples</span></strong></h4>
 <h4><span style="color:black">Python string</span></strong></h4>
@@ -15,6 +15,7 @@
 Python supports integers, floating point numbers and complex numbers. They are defined as <i>int</i>, <i>float</i> and <i>complex</i> class in Python.
 
 Integers and floating points are separated by the presence or absence of a decimal point. 5 is integer whereas 5.0 is a floating point number.
+<br>
 
 Complex numbers are written in the form, <i>x + yj</i>, where <i>x</i> is the real part and <i>y</i> is the imaginary part.
 
