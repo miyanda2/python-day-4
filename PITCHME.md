@@ -15,7 +15,7 @@
 Python supports integers, floating point numbers and complex numbers. They are defined as <i>int</i>, <i>float</i> and <i>complex</i> class in Python.
 
 Integers and floating points are separated by the presence or absence of a decimal point. 5 is integer whereas 5.0 is a floating point number.
-<br>
+---
 
 Complex numbers are written in the form, <i>x + yj</i>, where <i>x</i> is the real part and <i>y</i> is the imaginary part.
 
@@ -43,10 +43,11 @@ print(isinstance(c, complex))
 While integers can be of any length, a floating point number is accurate only up to 15 decimal places (the 16th place is inaccurate).
 
 Numbers we deal with everyday are decimal (base 10) number system. But computer programmers (generally embedded programmer) need to work with binary (base 2), hexadecimal (base 16) and octal (base 8) number systems.
+---
 
 In Python, we can represent these numbers by appropriately placing a prefix before that number. Following table lists these prefix.
 
----
+
 ####Number system prefix for Python numbers
 Number System | Prefix
 ------------ | -------------
